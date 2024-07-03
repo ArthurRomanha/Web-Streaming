@@ -6,7 +6,11 @@
     --fonte-principal: 'Inter';
     --botao-azul-efeito: #3c92fa;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
@@ -15,15 +19,12 @@ body {
     font-weight: 400;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 .principal {
-    background-image: url("img/Background.png");
+    background-image: url("img/streaming-bg.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
     align-items: center;
     text-align: center;
 }
@@ -62,3 +63,47 @@ body {
 .container__imagem {
     margin: 1em 0 2em 0;
 }
+.propaganda-plataformas{
+    max-width: 50%;
+}
+.plataformas{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#telas{
+    width: 30%;
+}
+#btnCombo{
+    margin-top: 5px;
+    background-color: var(--botao-azul-efeito);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+#btnCombo:hover{
+    animation: swing 1s ease;
+    animation: anime-balanco 1s ease;
+}
+@keyframes anime-balanco {
+    15% {
+         transform: translateX(7px);
+     }
+     30% {
+         transform: translateX(-7px);
+     }
+     50% {
+         transform: translateX(3px);
+     }
+     65% {
+         transform: translateX(-3px);
+     }
+     80% {
+         transform: translateX(2px);
+     }
+     100% {
+         transform: translateX(0);
+     }
+ }
